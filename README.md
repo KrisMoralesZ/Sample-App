@@ -1,14 +1,10 @@
 # README
+This is a Sample Application from the Learn Ruby on Rails Tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ruby version
+2.6.6
 
-Things you may want to cover:
-
-## Ruby version
-    2.6.6
-
-## Getting started
+# Getting started
 To get started with the app, clone the repo and then install the needed gems:
 ```
 $ bundle install --without production
