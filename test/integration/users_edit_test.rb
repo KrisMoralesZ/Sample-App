@@ -7,6 +7,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "unsucceful edit" do
+    log_in_as (@user)
     get edit_user_path(@user)
     assert_template 'users/edit'
     patch user_path(@user), params: {
@@ -21,6 +22,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "succesful edit" do
+    log_in_as (@user)
     get edit_user_path(@user)
     assert_template 'users/edit'
     name = "user"
