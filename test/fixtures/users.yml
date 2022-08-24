@@ -2,3 +2,8 @@ user:
   name: user
   email: user@user.com
   password_digest: <%= User.digest('password') %>
+
+other_user:
+  name: other_user
+  email: other_user@user.com
+  password_digest: <%= User.digest('password') %>
