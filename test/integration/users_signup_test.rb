@@ -8,7 +8,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: { user: {name: "",
         email: "user@invalid",
         password: "pass",
-        password_confiormation: "word"}}
+        password_confirmation: "word"}}
     end
     assert_template 'users/new'
   end
