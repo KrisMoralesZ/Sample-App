@@ -21,11 +21,11 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_template 'users/edit'  
   end
 
-  test "succesful edit" do
-    log_in_as (@user)
+  test "successful edit with frienly forwading" do
     get edit_user_path(@user)
-    assert_template 'users/edit'
-    name = "user"
+    log_in_as(@user)
+    assert_redirected_to edit_user_url(@user)
+    name = "User"
     email = "user@user.com"
     patch user_path(@user), params: {
       user: {
