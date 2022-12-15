@@ -7,6 +7,9 @@ ruby '2.6.6'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Active Storage
 gem 'active_storage_validations', '0.8.2'
+# Image procesor
+gem 'image_processing', '1.9.3'
+gem 'mini_magick', '4.9.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
