@@ -27,7 +27,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_match content, response.body
     
     #Delete Post
-    assert_select 'a' text: 'delete'
+    assert_select "a", 'delete'
     first_micropost = @user.microposts.paginate(page: 1).first
     assert_difference 'Micropost.count', -1 do
       delete micropost_path(first_micropost)
