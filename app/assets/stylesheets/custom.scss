@@ -11,7 +11,7 @@ $gray-medium-light: #eaeaea;
 }
 
 /* micellaneous */
-.debug_dump{
+.debug_dump {
   clear: both;
   float: left;
   width: 100%;
@@ -61,7 +61,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color:$gray-light;
+  color: $gray-light;
 }
 p {
   font-weight: 1.1em;
@@ -117,9 +117,55 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+
+  .gravatar {
+    margin: 1px 1px;
+  }
+
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
 
 /* forms */
-input, textarea, select, .unidetable-input {
+input,
+textarea,
+select,
+.unidetable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-botton: 15px;
@@ -130,7 +176,7 @@ input {
 }
 #error_explanation {
   color: red;
-  ul{
+  ul {
     color: red;
     margin: 0 0 30px 0;
   }
@@ -181,7 +227,7 @@ footer {
 }
 
 /* Media */
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   footer {
     small {
       display: block;
