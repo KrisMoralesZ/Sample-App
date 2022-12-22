@@ -11,17 +11,13 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'div.pagination'
 
     #Invalid submision
-    assert_no_difference 'Micropost.count' do
-      post micropost_path, params: { micropost: { content: "" } }
-    end
+    post microposts_path, params: { micropost: { content: "" } }
     assert_select 'div#error_explanation'
     assert_select 'a[href=?]', '/?page=2'
 
     #Valid submision
     content = "This micropost really ties the room together"
-    assert_diference 'Micropost.count', 1 do
-      post micropost_path, params: {micropost: { content: content } }
-    end
+    post microposts_path, params: {micropost: { content: content } }
     assert_redirected_to root_url
     follow_redirect!
     assert_match content, response.body
